@@ -14,17 +14,22 @@ contract Staker {
 
   event Stake(address by, uint256 amount);
 
-  uint256 public deadline = block.timestamp + 300 seconds;
+  uint256 public deadline = block.timestamp + 30 seconds;
 
-  bool public openForWithdraw = false;
+  bool internal openForWithdraw = false;
 
-  constructor(address exampleExternalContractAddress) public {
+  constructor(address exampleExternalContractAddress) {
       exampleExternalContract = ExampleExternalContract(exampleExternalContractAddress);
+  }
+
+  modifier notCompleted() {
+    bool completed = exampleExternalContract.completed();
+    require(!completed, "Not Completed"); 
+    _;
   }
 
   // Collect funds in a payable `stake()` function and track individual `balances` with a mapping:
   //  ( make sure to add a `Stake(address,uint256)` event and emit it for the frontend <List/> display )
-
   function stake() public payable {
     balances[msg.sender] += msg.value;
 
@@ -33,23 +38,25 @@ contract Staker {
 
   // After some `deadline` allow anyone to call an `execute()` function
   //  It should either call `exampleExternalContract.complete{value: address(this).balance}()` to send all the value
+  
   // if the `threshold` was not met, allow everyone to call a `withdraw()` function
-
-  function execute() public {
+  function execute() public notCompleted {
     if (block.timestamp > deadline) {
       if (address(this).balance > threshold) {
         exampleExternalContract.complete{value: address(this).balance}();    
       } else if (address(this).balance < threshold) {
         openForWithdraw = true;
       }
-    }
+    } 
   }
 
   // Add a `withdraw()` function to let users withdraw their balance
-  function withdraw() public {
+  function withdraw() public notCompleted {
     if (openForWithdraw) {
       uint256 amount = balances[msg.sender];
-      // address(this).balance += amount;
+      (bool success, ) = payable(msg.sender).call{value: amount}("");
+
+      require(success, "Failed to send Ether");
     }
   }
 
@@ -64,10 +71,5 @@ contract Staker {
   // Add the `receive()` special function that receives eth and calls stake()
   receive() external payable {
     stake();
-  }
-
-  modifier notCompleted() {
-    require(exampleExternalContract.completed == false, "Not Completed"); 
-    _;
   }
 }
