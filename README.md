@@ -2,6 +2,9 @@
 
 ## Recreate challenges 0 - 2 from https://speedrunethereum.com/
 #
+
+## Speedrun URL : https://speedrunethereum.com/builders/0xD0aAB48daF5A4851C2c71b05165CeD35CaA9197E
+
 #  SITE  URLs
 
 
@@ -18,5 +21,6 @@
 #
 
 ## Challenge 2 
-###   **`Surge`**:   https://noisy-attraction.surge.sh
-###   **`Verified contract address`**: https://rinkeby.etherscan.io/address/0x4008db6f55Ab732C0895D15562c037163f200a59#code
+###   **`Surge`**:   https://kingholyhill-token-vendor.surge.sh/
+###   **`Verified Vendor contract address`**: https://rinkeby.etherscan.io/address/0xf4A117a78ae0461c34f55e6c2F9495563e0fE4C3#code
+###   **`Verified YourToken contract address`**: https://rinkeby.etherscan.io/address/0xCEf79C5D9139861c06334b986D8263d164BB7495#code
