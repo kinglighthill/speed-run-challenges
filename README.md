@@ -7,12 +7,13 @@
 
 ## Challenge 0 
 ###   **`Surge`**:   https://kingholyhill-simple-nft.surge.sh/   
-###   **`Verified contract address`**: https://rinkeby.etherscan.io/address/0x059524fF500765058BE7484dC5E83457E6E80927
+###   **`Verified contract address`**: https://rinkeby.etherscan.io/address/0x059524fF500765058BE7484dC5E83457E6E80927#code
 
 #
 ## Challenge 1 
-###   **`Surge`**:   https://awesome-turn.surge.sh 
-###   **`Verified contract address`**: https://rinkeby.etherscan.io/address/0x867B2E694C246b2daaDE7fD75a20B96354230382#code
+###   **`Surge`**:   https://kingholyhill-decentralized-staking.surge.sh/ 
+###   **`Verified Staker contract address`**: https://rinkeby.etherscan.io/address/0xe8ef9C6b72376fa578C8321C17192Fd9e8030820#code
+###   **`Verified Example External contract address`**: https://rinkeby.etherscan.io/address/0x2f5F1415B026a38F5643D6eFAAa260def44e8b74#code
 
 #
 
