@@ -22,5 +22,5 @@
 
 ## Challenge 2 
 ###   **`Surge`**:   https://kingholyhill-token-vendor.surge.sh/
-###   **`Verified Vendor contract address`**: https://rinkeby.etherscan.io/address/0xf4A117a78ae0461c34f55e6c2F9495563e0fE4C3#code
-###   **`Verified YourToken contract address`**: https://rinkeby.etherscan.io/address/0xCEf79C5D9139861c06334b986D8263d164BB7495#code
+###   **`Verified Vendor contract address`**: https://rinkeby.etherscan.io/address/0xebc8070cf2bFA322E12d4EEfA224435aEBDEA42A#code 
+###   **`Verified YourToken contract address`**: https://rinkeby.etherscan.io/address/0x3AA564aBfA8f61cB27e4eE6D7f8cc9fb3982Ab0C#code
