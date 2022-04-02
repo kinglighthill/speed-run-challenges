@@ -1,37 +1,26 @@
-# 🏗👷🏾 Scaffold-ETH Challenges
+# BLOCKGAMES INTERNSHIP GAME PHASE TASK 1
 
-> learn how to use 🏗 scaffold-eth to create decentralized applications on Ethereum. 🚀
+## Recreate challenges 0 - 2 from https://speedrunethereum.com/
+#
 
----
+## Speedrun URL : https://speedrunethereum.com/builders/0xD0aAB48daF5A4851C2c71b05165CeD35CaA9197E
 
-## 🚩 Challenge 0: 🎟 Simple NFT Example 🤓
+#  SITE  URLs
 
-🎫 Create a simple NFT to learn basics of 🏗 scaffold-eth. You'll use 👷‍♀️ HardHat to compile and deploy smart contracts. Then, you'll use a template React app full of important Ethereum components and hooks. Finally, you'll deploy an NFT to a public network to share with friends! 🚀
 
-https://github.com/scaffold-eth/scaffold-eth-challenges/tree/challenge-0-simple-nft
+## Challenge 0 
+###   **`Surge`**:   https://kingholyhill-simple-nft.surge.sh/   
+###   **`Verified contract address`**: https://rinkeby.etherscan.io/address/0x059524fF500765058BE7484dC5E83457E6E80927#code
 
----
+#
+## Challenge 1 
+###   **`Surge`**:   https://kingholyhill-decentralized-staking.surge.sh/ 
+###   **`Verified Staker contract address`**: https://rinkeby.etherscan.io/address/0xe8ef9C6b72376fa578C8321C17192Fd9e8030820#code
+###   **`Verified Example External contract address`**: https://rinkeby.etherscan.io/address/0x2f5F1415B026a38F5643D6eFAAa260def44e8b74#code
 
-## 🚩 Challenge 1: 🥩 Decentralized Staking App
+#
 
-🦸 A superpower of Ethereum is allowing you, the builder, to create a simple set of rules that an adversarial group of players can use to work together. In this challenge, you create a decentralized application where users can coordinate a group funding effort. If the users cooperate, the money is collected in a second smart contract. If they defect, the worst that can happen is everyone gets their money back. The users only have to trust the code.
-
-https://github.com/scaffold-eth/scaffold-eth-challenges/tree/challenge-1-decentralized-staking
-
----
-
-## 🚩 Challenge 2: 🏵 Token Vendor 🤖
-
-🤖 Smart contracts are kind of like "always on" vending machines that anyone can access. Let's make a decentralized, digital currency. Then, let's build an unstoppable vending machine that will buy and sell the currency. We'll learn about the "approve" pattern for ERC20s and how contract to contract interactions work.
-
-https://github.com/scaffold-eth/scaffold-eth-challenges/tree/challenge-2-token-vendor
-
----
-
-### 💬 Support Chat
-
-Join the telegram [support chat 💬](https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA) to ask questions and find others building with 🏗 scaffold-eth!
-
----
-
-🙏 Please check out our [Gitcoin grant](https://gitcoin.co/grants/2851/scaffold-eth) too!
+## Challenge 2 
+###   **`Surge`**:   https://kingholyhill-token-vendor.surge.sh/
+###   **`Verified Vendor contract address`**: https://rinkeby.etherscan.io/address/0xf4A117a78ae0461c34f55e6c2F9495563e0fE4C3#code
+###   **`Verified YourToken contract address`**: https://rinkeby.etherscan.io/address/0xCEf79C5D9139861c06334b986D8263d164BB7495#code
