@@ -21,25 +21,27 @@ contract Vendor is Ownable {
   function buyTokens() public payable {
     uint256 amount = msg.value * tokensPerEth;
     yourToken.transfer(msg.sender, amount);
-    emit BuyTokens(msg.sender, msg.value / (10 ** 18), amount / (10 ** 18));
+
+    emit BuyTokens(msg.sender, msg.value, amount);
   }
 
   // ToDo: create a withdraw() function that lets the owner withdraw ETH
   function withdraw() public onlyOwner {
     uint256 amount = address(this).balance;
     require(amount > 0, "Not enough Ether available");
-    (bool success, ) = owner().call{value: amount}("");
+    (bool success, ) = msg.sender.call{value: amount}("");
     require(success, "Failed to withdraw Eth");
   }
 
   // ToDo: create a sellTokens() function:
   function sellTokens(uint256 amount) public {
-    uint256 tokens = amount * tokensPerEth;
-    // uint256 eth = tokens / tokensPerEth;
+    uint256 eth = amount / tokensPerEth;
+
     yourToken.transferFrom(msg.sender, address(this), amount);
-    (bool success, ) = msg.sender.call{value: amount}("");
-    // (bool success, ) = owner().call{value: amount}("");
-    emit SellTokens(msg.sender, amount, tokens);
+    (bool sent, ) = msg.sender.call{value: eth }("");
+    require(sent, "Failed to transfer Eth");
+
+    emit SellTokens(msg.sender, amount, eth);
   }
 
 }
